@@ -1,11 +1,11 @@
+#"ABNT" do nosso arquivo que define a formatacao e os nomes (keys)
 version: '3.1'
 
+#ex: é o cara que vai orquestrar todas as aplicacoes do projeto*
 services:
 
-  db:
+  mysql:
     image: mysql
-    # NOTE: use of "mysql_native_password" is not recommended: https://dev.mysql.com/doc/refman/8.0/en/upgrading-from-previous-series.html#upgrade-caching-sha2-password
-    # (this is just an example, not intended to be a production configuration)
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
@@ -13,9 +13,23 @@ services:
     ports:
       - "3306:3306"
 
-
-  adminer:
-    image: adminer
+  postgres:
+    image: postgres
     restart: always
+    environment:
+      POSTGRES_DB: metabase
+      POSTGRES_USER: dataops
+      POSTGRES_PASSWORD: dataops
     ports:
-      - "8080:8080"
+      - "5432:5432"
+
+  metabase:
+    image: metabase/metabase
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: metabase
+      MB_DB_PORT: 5432
+      MB_DB_USER: dataops
+      MB_DB_PASS: dataops
+    ports:
+      - "3000:3000"
