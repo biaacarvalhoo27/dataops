@@ -1,9 +1,7 @@
 
-FROM python:3
+FROM python:latest
 
-COPY main.py /app/
-
-WORKDIR /app
+ADD main.py .
 
 RUN pip install pandas
 
