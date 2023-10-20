@@ -4,3 +4,4 @@ def mlops(msg):
 
 if __name__ == '__main__':
     mlops('MLOPS Puc Minas')
+
