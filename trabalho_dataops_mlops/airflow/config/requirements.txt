@@ -1,0 +1,6 @@
+ntlk
+pandas
+pymysql
+psycopg2
+sqlalchemy
+cryptography
