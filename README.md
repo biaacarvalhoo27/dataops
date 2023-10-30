@@ -2,8 +2,8 @@
 
 <a href="https://pypi.org/project/apache-airflow/">
 
-<img src = "https://img.shields.io/github/languages/top/walteravelino/dataops">
-<a href="https://github.com/walteravelino/Projetos/blob/master/LICENSE"><img src = "https://img.shields.io/github/license/walteravelino/dataops"></a>
+<img src = "https://img.shields.io/github/languages/top/biaacarvalhoo27/dataops">
+<a href="https://github.com/biaacarvalhoo27/dataops/blob/master/LICENSE"><img src = "https://img.shields.io/github/license/biaacarvalhoo27/dataops"></a>
 
 Descreva o que é o projeto e o que ele faz
 
